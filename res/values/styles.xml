@@ -16,5 +16,40 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+     <style name="main_button_tablet">
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_width">500dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+    
+     <style name="order_button_tablet">
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_width">400dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:layout_marginBottom">40dp</item>
+        <item name="android:layout_marginLeft">50dp</item>
+    </style>
+    
+     <style name="checkout_button_tablet">
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_width">400dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:layout_marginBottom">40dp</item>
+        <item name="android:layout_marginLeft">400dp</item>
+    </style>
+    
+    
+     <color name="tap_color">#f5f5f5</color>
 
 </resources>
