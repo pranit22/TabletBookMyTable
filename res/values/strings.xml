@@ -14,5 +14,26 @@
     <string name="tap">Tap Your Device</string>
     <string name="order">ORDER</string>
     <string name="checkout">CHECKOUT</string>
+    <string name="dummy_section_text">dummy_section_text</string>
+    <string name="pay_now">Pay Now!</string>
+    <string name="tip">00.00</string>
+    <string name="payment">Payment Details</string>
+    <string name="bill_details">
+        \t\t--------------------------------------------------------------------------------------------------\n
+       \t\t\t \t1\t\t\tx\t\t\tPizza\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$11.99\n
+       \t\t\t \t2\t\t\tx\t\t\tPasta\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$15.98\n
+       \t\t\t \t2\t\t\tx\t\t\tBruschetta\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$11.98\n
+    \t\t--------------------------------------------------------------------------------------------------\n
+    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSubtotal:\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$39.95\n
+    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTax:\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$03.95\n
+        \t\t--------------------------------------------------------------------------------------------------\n
+     \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tGrandtotal:\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$43.90\n
+     \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTip:\n</string>
+     <string name="bill_details_final">
+     \t\t--------------------------------------------------------------------------------------------------\n
+         \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPayment Amount:\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$48.90\n
+           \t\t--------------------------------------------------------------------------------------------------\n
+    </string>
+    
 
 </resources>
