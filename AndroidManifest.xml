@@ -33,15 +33,16 @@
         <activity
             android:name="com.tabletbookmytable.SubMenuActivity"
             android:label="@string/title_activity_sub_menu" >
-        </activity>
-        <activity
-            android:name="com.tabletbookmytable.PaymentActivity"
-            android:label="@string/title_activity_payment" >
-            <intent-filter>
+                        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tabletbookmytable.PaymentActivity"
+            android:label="@string/title_activity_payment" >
+
         </activity>
         <activity
             android:name="com.tabletbookmytable.TabbedMenuActivity"
