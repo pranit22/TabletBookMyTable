@@ -39,42 +39,42 @@
             android:background="@drawable/appetizers"
             android:layout_height="250dp"
             android:layout_width="350dp"
-            android:layout_margin="5dp" />
+            android:layout_margin="15dp" />
         
         <TextView
             android:contentDescription="@string/pay_now"
             android:background="@drawable/beverages"  
             android:layout_height="250dp"
             android:layout_width="350dp"
-            android:layout_margin="5dp"  />
+            android:layout_margin="15dp"  />
         
         <TextView
              android:background="@drawable/salads" 
              android:contentDescription="@string/pay_now"
              android:layout_height="250dp"
             android:layout_width="350dp"
-            android:layout_margin="5dp"  />
+            android:layout_margin="15dp"  />
         
         <TextView 
             android:background="@drawable/mains" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
             android:layout_width="350dp"  
-            android:layout_margin="5dp"  />
+            android:layout_margin="15dp"  />
         
         <TextView 
             android:background="@drawable/pizzas" 
             android:contentDescription="@string/pay_now" 
             android:layout_height="250dp"
             android:layout_width="350dp"
-            android:layout_margin="5dp" />
+            android:layout_margin="15dp" />
         
         <TextView 
             android:background="@drawable/desserts" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
             android:layout_width="350dp" 
-            android:layout_margin="5dp"/>
+            android:layout_margin="15dp"/>
         
         
         
