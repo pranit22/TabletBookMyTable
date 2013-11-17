@@ -2,7 +2,9 @@ package com.tabletbookmytable;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
 
 public class OptionsActivity extends Activity
 {
@@ -20,6 +22,16 @@ public class OptionsActivity extends Activity
 	// Inflate the menu; this adds items to the action bar if it is present.
 	getMenuInflater().inflate(R.menu.options, menu);
 	return true;
+    }
+    
+    public void orderFood(View view)
+    {
+    startActivity(new Intent(this, SubMenuActivity.class));
+    }
+    
+    public void checkoutToPay(View view)
+    {
+    startActivity(new Intent(this, PaymentActivity.class));
     }
 
 }

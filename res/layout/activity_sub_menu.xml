@@ -12,16 +12,7 @@
 	android:focusableInTouchMode="true"
     tools:context=".PaymentActivity" >
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:alpha="1"
-        android:contentDescription="@string/pay_now"
-        android:gravity="bottom"
-        android:scaleType="fitXY"
-        android:src="@drawable/tablet_header_image" />
+
     
     <GridLayout
         android:rowCount="2"
@@ -30,57 +21,75 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="50dp"
         android:layout_marginLeft="50dp">
         
         
         <TextView 
+            android:id="@+id/submenu_app"
             android:contentDescription="@string/pay_now"
             android:background="@drawable/appetizers"
             android:layout_height="250dp"
             android:layout_width="350dp"
-            android:layout_margin="15dp" />
+            android:layout_margin="15dp"
+            android:clickable="true"
+            android:onClick="onApp" />
         
         <TextView
+            android:id="@+id/submenu_bev"
             android:contentDescription="@string/pay_now"
             android:background="@drawable/beverages"  
             android:layout_height="250dp"
             android:layout_width="350dp"
-            android:layout_margin="15dp"  />
+            android:layout_margin="15dp"  
+                        android:clickable="true"
+            
+            android:onClick="onBev"          />
         
         <TextView
+            android:id="@+id/submenu_salad"
              android:background="@drawable/salads" 
              android:contentDescription="@string/pay_now"
              android:layout_height="250dp"
             android:layout_width="350dp"
-            android:layout_margin="15dp"  />
+            android:layout_margin="15dp"
+                        android:clickable="true"
+            
+            android:onClick="onSal"           />
         
         <TextView 
+            android:id="@+id/submenu_main"
             android:background="@drawable/mains" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
             android:layout_width="350dp"  
-            android:layout_margin="15dp"  />
+            android:layout_margin="15dp"
+                        android:clickable="true"
+            
+            android:onClick="onMain"          />
         
         <TextView 
+            android:id="@+id/submenu_pizza"
             android:background="@drawable/pizzas" 
             android:contentDescription="@string/pay_now" 
             android:layout_height="250dp"
+                        android:clickable="true"
+            
             android:layout_width="350dp"
-            android:layout_margin="15dp" />
+            android:layout_margin="15dp"   
+            android:onClick="onPizza"          />
         
         <TextView 
+            android:id="@+id/submenu_dess"
             android:background="@drawable/desserts" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
+                        android:clickable="true"
+            
             android:layout_width="350dp" 
-            android:layout_margin="15dp"/>
-        
-        
-        
+            android:layout_margin="15dp"       
+            android:onClick="onDess"        />
+            
         </GridLayout>
     
-    
-
-
 </RelativeLayout>
