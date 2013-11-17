@@ -42,7 +42,8 @@ ActionBar.TabListener
             actionBar.addTab(actionBar.newTab().setText(tab_name)
                     .setTabListener(this));
         }
-        
+
+
         getActionBar().setDisplayShowHomeEnabled(false);
 
         getActionBar().setDisplayShowTitleEnabled(false);
@@ -64,9 +65,14 @@ ActionBar.TabListener
             public void onPageScrollStateChanged(int arg0) {
             }
         });
-        
-        
-        
+
+        Bundle extras = getIntent().getExtras();
+        int tabIndex = 0;
+        if (extras != null) {
+            tabIndex = extras.getInt("tabIndex");
+        }
+        viewPager.setCurrentItem(tabIndex, true);
+
     }
 
 	@Override

@@ -27,32 +27,44 @@ public class SubMenuActivity extends Activity
     
     public void onApp(View view)
     {
-    startActivity(new Intent(this, TabbedMenuActivity.class));  
+        Intent intent = new Intent(this, TabbedMenuActivity.class);
+        intent.putExtra("tabIndex", 0);
+        startActivity(intent);
     }
     
     public void onBev(View view)
     {
-    startActivity(new Intent(this, BeveragesFragment.class));
+        Intent intent = new Intent(this, TabbedMenuActivity.class);
+        intent.putExtra("tabIndex", 1);
+        startActivity(intent);
     }
     
     public void onSal(View view)
     {
-    startActivity(new Intent(this, SaladsFragment.class));
+        Intent intent = new Intent(this, TabbedMenuActivity.class);
+        intent.putExtra("tabIndex", 2);
+        startActivity(intent);
     }
     
     public void onMain(View view)
     {
-    startActivity(new Intent(this, MainsFragment.class));
+        Intent intent = new Intent(this, TabbedMenuActivity.class);
+        intent.putExtra("tabIndex", 3);
+        startActivity(intent);
     }
     
     public void onPizza(View view)
     {
-    startActivity(new Intent(this, PizzasFragment.class));
+        Intent intent = new Intent(this, TabbedMenuActivity.class);
+        intent.putExtra("tabIndex", 4);
+        startActivity(intent);
     }
     
     public void onDess(View view)
     {
-    startActivity(new Intent(this, DessertsFragment.class));
+        Intent intent = new Intent(this, TabbedMenuActivity.class);
+        intent.putExtra("tabIndex", 5);
+        startActivity(intent);
     }
 
 }
