@@ -16,6 +16,9 @@
     <string name="checkout">CHECKOUT</string>
     <string name="dummy_section_text">dummy_section_text</string>
     <string name="pay_now">Pay Now!</string>
+    <string name="title_section1">AAA</string>
+    <string name="title_section2">BBB</string>
+    <string name="title_section3">CCC</string>
     <string name="tip">00.00</string>
     <string name="payment">Payment Details</string>
     <string name="bill_details">
