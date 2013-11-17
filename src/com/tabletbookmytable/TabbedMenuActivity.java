@@ -21,7 +21,7 @@ ActionBar.TabListener
     private TabsPages mAdapter;
     private ActionBar actionBar;
     // Tab titles
-    private String[] tabs = { "Top Rated", "Games", "Movies" };
+    private String[] tabs = { "Appetizers", "Salads", "Mains", "Beverages", "Pizzas", "Desserts" };
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,31 @@ ActionBar.TabListener
             actionBar.addTab(actionBar.newTab().setText(tab_name)
                     .setTabListener(this));
         }
+        
+        getActionBar().setDisplayShowHomeEnabled(false);
+
+        getActionBar().setDisplayShowTitleEnabled(false);
+        
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        	 
+            @Override
+            public void onPageSelected(int position) {
+                // on changing the page
+                // make respected tab selected
+                actionBar.setSelectedNavigationItem(position);
+            }
+ 
+            @Override
+            public void onPageScrolled(int arg0, float arg1, int arg2) {
+            }
+ 
+            @Override
+            public void onPageScrollStateChanged(int arg0) {
+            }
+        });
+        
+        
+        
     }
 
 	@Override
@@ -53,6 +78,7 @@ ActionBar.TabListener
 	@Override
 	public void onTabSelected(Tab tab, FragmentTransaction ft) {
 		// TODO Auto-generated method stub
+		  viewPager.setCurrentItem(tab.getPosition());
 		
 	}
 
