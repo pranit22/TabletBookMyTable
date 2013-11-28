@@ -1,21 +1,29 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true"
     tools:context=".PaymentActivity">
 
+    <LinearLayout
+        android:layout_height="75dp"
+        android:layout_width="match_parent"
+        android:background="@android:color/black">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Welcome Text and other texts (removed activity name)"
+            android:textSize="30sp"
+            />
+        </LinearLayout>
 
     <GridLayout
         android:rowCount="2"
         android:columnCount="3"
+        android:paddingLeft="15dp"
         style="@style/subMenuGrid">
 
 
@@ -63,4 +71,4 @@
 
     </GridLayout>
 
-</RelativeLayout>
+</LinearLayout>
