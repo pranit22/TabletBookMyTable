@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout 
-    android:layout_gravity="center"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    
-<LinearLayout 
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="true"
-    android:orientation="horizontal" 
-    android:minWidth="200dp" 
-  android:minHeight="80dp"
-    android:id="@+id/popup">
+    android:layout_gravity="center" >
 
-    
-    <Button
+    <Spinner
+        android:id="@+id/foodcountspinner"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:textSize="20dp"
+		android:gravity="center_horizontal"
+        android:entries="@array/qty" />
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foodcountspinner"
+        android:layout_marginTop="15dp" >
+
+        <Button
             android:id="@+id/button2"
-            android:drawableLeft="@drawable/icon_exit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:width="150dp"
-            android:height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/foodcountspinner"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/icon_exit"
             android:text="CANCEL" />
-       
-            <Spinner
-        android:id="@+id/foodcountspinner"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="50dp"
-        android:entries="@array/qty" />
-    
-            <Button
-            android:id="@+id/addbutton"
-            android:drawableLeft="@drawable/tick"
-            android:text="ADD"
-            android:width="100dp"
-            android:height="50dp"
-        android:layout_marginLeft="100dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"  />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/addbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/button2"
+            android:layout_alignBottom="@+id/button2"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/tick"
+            android:text="ADD" />
+
+    </LinearLayout>
 
 </RelativeLayout>
