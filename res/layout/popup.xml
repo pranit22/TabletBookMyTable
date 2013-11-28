@@ -1,32 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal" >
+<RelativeLayout 
+    android:layout_gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:orientation="horizontal" 
+    android:minWidth="200dp" 
+  android:minHeight="80dp"
+    android:id="@+id/popup">
 
-        <Button
-            android:id="@+id/button1"
-            android:drawableLeft="@drawable/tick"
-            android:text="OK"
-            android:width="100dp"
-            android:height="50dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"  />
-        
-            <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:entries="@array/qty" />
-
+    
     <Button
             android:id="@+id/button2"
-            style="@style/big_button"
             android:drawableLeft="@drawable/icon_exit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:width="100dp"
+            android:width="150dp"
             android:height="50dp"
             android:text="CANCEL" />
+       
+            <Spinner
+        android:id="@+id/foodcountspinner"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:entries="@array/qty" />
+    
+            <Button
+            android:id="@+id/addbutton"
+            android:drawableLeft="@drawable/tick"
+            android:text="ADD"
+            android:width="100dp"
+            android:height="50dp"
+        android:layout_marginLeft="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"  />
 
 </LinearLayout>
+
+</RelativeLayout>

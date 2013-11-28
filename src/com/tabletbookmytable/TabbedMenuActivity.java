@@ -1,5 +1,7 @@
 package com.tabletbookmytable;
 
+import java.util.HashMap;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -8,21 +10,33 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ActionBar.Tab;
+import android.app.Dialog;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 public class TabbedMenuActivity extends FragmentActivity implements
-ActionBar.TabListener 
+ActionBar.TabListener
 {
     private ViewPager viewPager;
     private TabsPages mAdapter;
     private ActionBar actionBar;
+    public HashMap<String ,String> track_food = new HashMap<String ,String>();
     // Tab titles
     private String[] tabs = { "Appetizers", "Beverages", "Salads", "Mains", "Pizzas", "Desserts" };
     
@@ -77,39 +91,146 @@ ActionBar.TabListener
         viewPager.setCurrentItem(tabIndex, true);
 
     }
-    
-    public void onFirstAppetizer(View view)
+       
+    @SuppressWarnings("deprecation")
+	public void onbreadsticks(View view)
     {
-    /*    final Activity thisActivity = this;
-        new AlertDialog.Builder(thisActivity)
-                .setTitle("Booking Successful!")
-                .setMessage("Congratulations, table 2A at Yard House on Thursday, October 27, 8:00 PM has been successfully booked!")
-                .setPositiveButton("Continue", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                     //   startActivity(new Intent(thisActivity, MenuActivity.class));
-                    }
-                })
-                .show();	*/
-               
-        
-        LayoutInflater li = LayoutInflater.from(getBaseContext());
-        
-        View promptsView = li.inflate(R.layout.popup, null);
+    	System.out.print("hello");
 
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getBaseContext());
-        
-        alertDialogBuilder.setView(promptsView);
+    	LayoutInflater inflater = getLayoutInflater();
+    	final View dialoglayout = inflater.inflate(R.layout.popup,null);
+    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    	
+    	builder.setIcon(R.drawable.tick);
+    	builder.setTitle("Bread Sticks");
+    	builder.setView(dialoglayout);
+    	builder.show();
+    	System.out.print("hello");
+    	Button add = (Button)dialoglayout.findViewById(R.id.addbutton);
+    	add.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
 
-        alertDialogBuilder.setTitle("My Dialog..");
-        
-        final AlertDialog alertDialog = alertDialogBuilder.create();
+				Spinner fcount = (Spinner)dialoglayout.findViewById(R.id.foodcountspinner);
+				
+				String x = fcount.getSelectedItem().toString();
+							
+				System.out.print(x);
+				System.out.print("hello");
+			}
+		});
+    	
+     }
+    
+    public void onbruschetta(View view)
+    {   	
+    	LayoutInflater inflater = getLayoutInflater();
+    	final View dialoglayout = inflater.inflate(R.layout.popup,null);
+    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    	
+    	builder.setIcon(R.drawable.tick);
+    	builder.setTitle("Bruschetta");
+    	builder.setView(dialoglayout);
+    	builder.show();
+    	
+    	Button add = (Button)dialoglayout.findViewById(R.id.addbutton);
+    	add.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
 
-
-        alertDialog.show();
-      //  alertDialog.setCanceledOnTouchOutside(false);
-
-
-    }
+				Spinner fcount = (Spinner)dialoglayout.findViewById(R.id.foodcountspinner);
+				
+				String x = fcount.getSelectedItem().toString();
+							
+				System.out.print(x);
+				System.out.print("hello");
+			}
+		});
+  
+     }
+    
+    public void onchickenstrips(View view)
+    {   	
+    	LayoutInflater inflater = getLayoutInflater();
+    	View dialoglayout = inflater.inflate(R.layout.popup,null);
+    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    	
+    	builder.setIcon(R.drawable.tick);
+    	builder.setTitle("Chicken Strips");
+    	builder.setView(dialoglayout);
+    	builder.show();
+  
+     }
+    
+    public void onchickenwings(View view)
+    {   	
+    	LayoutInflater inflater = getLayoutInflater();
+    	View dialoglayout = inflater.inflate(R.layout.popup,null);
+    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    	
+    	builder.setIcon(R.drawable.tick);
+    	builder.setTitle("Chicken Wings");
+    	builder.setView(dialoglayout);
+    	builder.show();
+  
+     }
+    
+    public void onfalafel(View view)
+    {   	
+    	LayoutInflater inflater = getLayoutInflater();
+    	View dialoglayout = inflater.inflate(R.layout.popup,null);
+    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    	
+    	builder.setIcon(R.drawable.tick);
+    	builder.setTitle("Falafel");
+    	builder.setView(dialoglayout);
+    	builder.show();
+  
+     }
+    
+    public void ononionrings(View view)
+    {   	
+    	LayoutInflater inflater = getLayoutInflater();
+    	View dialoglayout = inflater.inflate(R.layout.popup,null);
+    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    	
+    	builder.setIcon(R.drawable.tick);
+    	builder.setTitle("Onion Rings");
+    	builder.setView(dialoglayout);
+    	builder.show();
+  
+     }
+    
+    public void onpretzels(View view)
+    {   	
+    	LayoutInflater inflater = getLayoutInflater();
+    	View dialoglayout = inflater.inflate(R.layout.popup,null);
+    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    	
+    	builder.setIcon(R.drawable.tick);
+    	builder.setTitle("Pretzels");
+    	builder.setView(dialoglayout);
+    	builder.show();
+  
+     }
+    
+    public void onspringrolls(View view)
+    {   	
+    	LayoutInflater inflater = getLayoutInflater();
+    	View dialoglayout = inflater.inflate(R.layout.popup,null);
+    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    	
+    	builder.setIcon(R.drawable.tick);
+    	builder.setTitle("Spring Rolls");
+    	builder.setView(dialoglayout);
+    	builder.show();
+  
+     }
+    
 	
 
 	@Override

@@ -36,69 +36,83 @@
         <TextView
             android:id="@+id/app1"
             android:contentDescription="@string/pay_now"
-            android:background="@drawable/beverages"  
+            android:background="@drawable/breadsticks"  
             android:layout_height="250dp"
             android:clickable="true"
             android:layout_width="350dp"
             android:layout_margin="15dp" 
             android:layout_gravity="fill" 
-            android:onClick="onFirstAppetizer"/>
+            android:onClick="onbreadsticks"/>
         
         <TextView
-             android:background="@drawable/salads" 
+             android:background="@drawable/bruschetta" 
              android:contentDescription="@string/pay_now"
              android:layout_height="250dp"
             android:layout_width="350dp"
+            android:clickable="true"
             android:layout_margin="15dp" 
-            android:layout_gravity="fill" />
+            android:layout_gravity="fill"
+            android:onClick="onbruschetta" />
         
         <TextView 
-            android:background="@drawable/mains" 
+            android:background="@drawable/chickenstrips" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
             android:layout_width="350dp"  
+            android:clickable="true"
             android:layout_margin="15dp" 
-            android:layout_gravity="fill" />
+            android:layout_gravity="fill" 
+            android:onClick="onchickenstrips"  />
         
         <TextView 
-            android:background="@drawable/pizzas" 
+            android:background="@drawable/chickenwings" 
             android:contentDescription="@string/pay_now" 
             android:layout_height="250dp"
             android:layout_width="350dp"
             android:layout_margin="15dp" 
-            android:layout_gravity="fill"  />
+            android:clickable="true"
+            android:layout_gravity="fill"
+            android:onClick="onchickenwings"  />
         
         <TextView 
-            android:background="@drawable/desserts" 
+            android:background="@drawable/falafel" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
             android:layout_width="350dp" 
             android:layout_margin="15dp" 
-            android:layout_gravity="fill"  />
+            android:layout_gravity="fill"
+            android:clickable="true"
+            android:onClick="onfalafel"  />
         
                 <TextView 
-            android:background="@drawable/desserts" 
+            android:background="@drawable/onionrings" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
             android:layout_width="350dp" 
+            android:clickable="true"
             android:layout_margin="15dp"
-            android:layout_gravity="fill"   />
+            android:layout_gravity="fill"
+            android:onClick="ononionrings"   />
                 
                                <TextView 
-            android:background="@drawable/desserts" 
+            android:background="@drawable/pretzels" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
             android:layout_width="350dp" 
+            android:clickable="true"
             android:layout_margin="15dp"  
-            android:layout_gravity="fill"  />
+            android:layout_gravity="fill"
+            android:onClick="onpretzels"  />
                                
                                               <TextView 
-            android:background="@drawable/desserts" 
+            android:background="@drawable/springrolls" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
+            android:clickable="true"
             android:layout_width="350dp" 
             android:layout_margin="15dp"  
-            android:layout_gravity="fill"  />
+            android:layout_gravity="fill"
+            android:onClick="onspringrolls"  />
 
                                               
                          

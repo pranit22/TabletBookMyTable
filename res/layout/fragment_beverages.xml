@@ -32,81 +32,57 @@
         android:layout_marginTop="50dp"
         android:layout_marginLeft="50dp">
         
-        
         <TextView 
-            android:contentDescription="@string/pay_now"
-            android:background="@drawable/appetizers"
-            android:layout_height="250dp"
-            android:layout_width="350dp"
-            android:layout_margin="15dp"
-            android:layout_gravity="fill"
-             />
-        
-        <TextView
-            android:contentDescription="@string/pay_now"
-            android:background="@drawable/beverages"  
-            android:layout_height="250dp"
-            android:layout_width="350dp"
-            android:layout_margin="15dp" 
-            android:layout_gravity="fill" />
-        
-        <TextView
-             android:background="@drawable/salads" 
-             android:contentDescription="@string/pay_now"
-             android:layout_height="250dp"
-            android:layout_width="350dp"
-            android:layout_margin="15dp" 
-            android:layout_gravity="fill" />
-        
-        <TextView 
-            android:background="@drawable/mains" 
+            android:background="@drawable/champurrado" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
             android:layout_width="350dp"  
             android:layout_margin="15dp" 
-            android:layout_gravity="fill" />
+            android:layout_gravity="fill"
+            android:clickable="true"
+            android:onClick="onchampurrado"    />
         
         <TextView 
-            android:background="@drawable/pizzas" 
+            android:background="@drawable/frozenhorchata" 
             android:contentDescription="@string/pay_now" 
             android:layout_height="250dp"
             android:layout_width="350dp"
             android:layout_margin="15dp" 
-            android:layout_gravity="fill"  />
+            android:layout_gravity="fill"
+            android:clickable="true"
+            android:onClick="onfrozenhorchata"  />
         
         <TextView 
-            android:background="@drawable/desserts" 
+            android:background="@drawable/hotchocolate" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
             android:layout_width="350dp" 
             android:layout_margin="15dp" 
-            android:layout_gravity="fill"  />
+            android:layout_gravity="fill"
+            android:clickable="true"
+            android:onClick="onhotchocolate"  />
         
                 <TextView 
-            android:background="@drawable/desserts" 
+            android:background="@drawable/latinlimeade" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
             android:layout_width="350dp" 
             android:layout_margin="15dp"
-            android:layout_gravity="fill"   />
+            android:layout_gravity="fill"
+            android:clickable="true"
+            android:onClick="onlatinlimeade"   />
                 
                                <TextView 
-            android:background="@drawable/desserts" 
+            android:background="@drawable/mockmargarita" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
             android:layout_width="350dp" 
             android:layout_margin="15dp"  
-            android:layout_gravity="fill"  />
+            android:layout_gravity="fill"
+            android:clickable="true"
+            android:onClick="onmockmargarita"  />
                                
-                                              <TextView 
-            android:background="@drawable/desserts" 
-            android:contentDescription="@string/pay_now"
-            android:layout_height="250dp"
-            android:layout_width="350dp" 
-            android:layout_margin="15dp"  
-            android:layout_gravity="fill"  />
-
-                                              
+      
                          
         </GridLayout>
                 </LinearLayout>

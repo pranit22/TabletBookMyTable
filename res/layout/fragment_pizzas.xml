@@ -28,85 +28,81 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        
         android:layout_marginTop="50dp"
         android:layout_marginLeft="50dp">
         
         
         <TextView 
             android:contentDescription="@string/pay_now"
-            android:background="@drawable/appetizers"
+            android:background="@drawable/cheeseburst"
             android:layout_height="250dp"
             android:layout_width="350dp"
             android:layout_margin="15dp"
             android:layout_gravity="fill"
+            android:clickable="true"
+            android:onClick="oncheeseburst"
              />
         
-        <TextView
-            android:contentDescription="@string/pay_now"
-            android:background="@drawable/beverages"  
-            android:layout_height="250dp"
-            android:layout_width="350dp"
-            android:layout_margin="15dp" 
-            android:layout_gravity="fill" />
         
         <TextView
-             android:background="@drawable/salads" 
+             android:background="@drawable/veggiedelight" 
              android:contentDescription="@string/pay_now"
              android:layout_height="250dp"
             android:layout_width="350dp"
             android:layout_margin="15dp" 
-            android:layout_gravity="fill" />
+            android:layout_gravity="fill"
+            android:clickable="true"
+            android:onClick="onveggiedelight"     />
         
         <TextView 
-            android:background="@drawable/mains" 
+            android:background="@drawable/italianmix" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
             android:layout_width="350dp"  
             android:layout_margin="15dp" 
-            android:layout_gravity="fill" />
+            android:layout_gravity="fill"
+            android:clickable="true"
+            android:onClick="onitalianmix"    />
         
         <TextView 
-            android:background="@drawable/pizzas" 
+            android:background="@drawable/makeyourownpizza" 
             android:contentDescription="@string/pay_now" 
             android:layout_height="250dp"
             android:layout_width="350dp"
             android:layout_margin="15dp" 
-            android:layout_gravity="fill"  />
+            android:layout_gravity="fill"
+            android:clickable="true"
+            android:onClick="onmakeyourownpizza"    />
         
         <TextView 
-            android:background="@drawable/desserts" 
+            android:background="@drawable/pepporonipizza" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
             android:layout_width="350dp" 
             android:layout_margin="15dp" 
-            android:layout_gravity="fill"  />
+            android:layout_gravity="fill"
+            android:clickable="true"
+            android:onClick="onpepporonipizza"  />
         
                 <TextView 
-            android:background="@drawable/desserts" 
+            android:background="@drawable/chickenpizza" 
+            android:contentDescription="@string/pay_now"
+            android:layout_height="250dp"
+            android:layout_width="350dp" 
+            android:layout_margin="15dp" 
+            android:layout_gravity="fill"
+            android:clickable="true"
+            android:onClick="onchickenpizza"  />
+        
+                <TextView 
+            android:background="@drawable/thincrust" 
             android:contentDescription="@string/pay_now"
             android:layout_height="250dp"
             android:layout_width="350dp" 
             android:layout_margin="15dp"
-            android:layout_gravity="fill"   />
-                
-                               <TextView 
-            android:background="@drawable/desserts" 
-            android:contentDescription="@string/pay_now"
-            android:layout_height="250dp"
-            android:layout_width="350dp" 
-            android:layout_margin="15dp"  
-            android:layout_gravity="fill"  />
-                               
-                                              <TextView 
-            android:background="@drawable/desserts" 
-            android:contentDescription="@string/pay_now"
-            android:layout_height="250dp"
-            android:layout_width="350dp" 
-            android:layout_margin="15dp"  
-            android:layout_gravity="fill"  />
-
-                                              
+            android:layout_gravity="fill"
+            android:clickable="true"
+            android:onClick="onthincrust"   />                                              
                          
         </GridLayout>
                 </LinearLayout>
