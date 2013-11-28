@@ -9,82 +9,58 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:descendantFocusability="beforeDescendants"
-	android:focusableInTouchMode="true"
-    tools:context=".PaymentActivity" >
+    android:focusableInTouchMode="true"
+    tools:context=".PaymentActivity">
 
 
-    
     <GridLayout
         android:rowCount="2"
         android:columnCount="3"
-        android:columnOrderPreserved="true"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="50dp">
-        
-        
-        <TextView 
+        style="@style/subMenuGrid">
+
+
+        <TextView
             android:id="@+id/submenu_app"
             android:contentDescription="@string/pay_now"
             android:background="@drawable/appetizers"
-            android:layout_height="250dp"
-            android:layout_width="350dp"
-            android:layout_margin="15dp"
-            android:clickable="true"
+            style="@style/food_item"
             android:onClick="onApp" />
-        
+
         <TextView
             android:id="@+id/submenu_bev"
             android:contentDescription="@string/pay_now"
-            android:background="@drawable/beverages"  
-            android:layout_height="250dp"
-            android:layout_width="350dp"
-            android:layout_margin="15dp"  
-            android:clickable="true"
-            android:onClick="onBev"          />
-        
+            android:background="@drawable/beverages"
+            style="@style/food_item"
+            android:onClick="onBev" />
+
         <TextView
             android:id="@+id/submenu_salad"
-            android:background="@drawable/salads" 
+            android:background="@drawable/salads"
             android:contentDescription="@string/pay_now"
-            android:layout_height="250dp"
-            android:layout_width="350dp"
-            android:layout_margin="15dp"
-            android:clickable="true"
-            android:onClick="onSal"           />
-        
-        <TextView 
+            style="@style/food_item"
+            android:onClick="onSal" />
+
+        <TextView
             android:id="@+id/submenu_main"
-            android:background="@drawable/mains" 
+            android:background="@drawable/mains"
             android:contentDescription="@string/pay_now"
-            android:layout_height="250dp"
-            android:layout_width="350dp"  
-            android:layout_margin="15dp"
-            android:clickable="true"        
-            android:onClick="onMain"          />
-        
-        <TextView 
+            style="@style/food_item"
+            android:onClick="onMain" />
+
+        <TextView
             android:id="@+id/submenu_pizza"
-            android:background="@drawable/pizzas" 
-            android:contentDescription="@string/pay_now" 
-            android:layout_height="250dp"
-            android:clickable="true"
-            android:layout_width="350dp"
-            android:layout_margin="15dp"   
-            android:onClick="onPizza"          />
-        
-        <TextView 
-            android:id="@+id/submenu_dess"
-            android:background="@drawable/desserts" 
+            android:background="@drawable/pizzas"
             android:contentDescription="@string/pay_now"
-            android:layout_height="250dp"
-            android:clickable="true"
-            android:layout_width="350dp" 
-            android:layout_margin="15dp"       
-            android:onClick="onDess"        />
-            
-        </GridLayout>
-    
+            style="@style/food_item"
+            android:onClick="onPizza" />
+
+        <TextView
+            android:id="@+id/submenu_dess"
+            android:background="@drawable/desserts"
+            android:contentDescription="@string/pay_now"
+            style="@style/food_item"
+            android:onClick="onDess" />
+
+    </GridLayout>
+
 </RelativeLayout>

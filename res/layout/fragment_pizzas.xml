@@ -9,105 +9,71 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:descendantFocusability="beforeDescendants"
-	android:focusableInTouchMode="true"
-    tools:context=".PaymentActivity" >
-    
-    <ScrollView 
+    android:focusableInTouchMode="true"
+    tools:context=".PaymentActivity">
+
+    <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
-        
-        <LinearLayout 
+
+        <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
-           
-    <GridLayout
-        android:rowCount="3"
-        android:columnCount="3"
-        android:columnOrderPreserved="true"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="50dp">
-        
-        
-        <TextView 
-            android:contentDescription="@string/pay_now"
-            android:background="@drawable/cheeseburst"
-            android:layout_height="250dp"
-            android:layout_width="350dp"
-            android:layout_margin="15dp"
-            android:layout_gravity="fill"
-            android:clickable="true"
-            android:onClick="oncheeseburst"
-             />
-        
-        
-        <TextView
-             android:background="@drawable/veggiedelight" 
-             android:contentDescription="@string/pay_now"
-             android:layout_height="250dp"
-            android:layout_width="350dp"
-            android:layout_margin="15dp" 
-            android:layout_gravity="fill"
-            android:clickable="true"
-            android:onClick="onveggiedelight"     />
-        
-        <TextView 
-            android:background="@drawable/italianmix" 
-            android:contentDescription="@string/pay_now"
-            android:layout_height="250dp"
-            android:layout_width="350dp"  
-            android:layout_margin="15dp" 
-            android:layout_gravity="fill"
-            android:clickable="true"
-            android:onClick="onitalianmix"    />
-        
-        <TextView 
-            android:background="@drawable/makeyourownpizza" 
-            android:contentDescription="@string/pay_now" 
-            android:layout_height="250dp"
-            android:layout_width="350dp"
-            android:layout_margin="15dp" 
-            android:layout_gravity="fill"
-            android:clickable="true"
-            android:onClick="onmakeyourownpizza"    />
-        
-        <TextView 
-            android:background="@drawable/pepporonipizza" 
-            android:contentDescription="@string/pay_now"
-            android:layout_height="250dp"
-            android:layout_width="350dp" 
-            android:layout_margin="15dp" 
-            android:layout_gravity="fill"
-            android:clickable="true"
-            android:onClick="onpepporonipizza"  />
-        
-                <TextView 
-            android:background="@drawable/chickenpizza" 
-            android:contentDescription="@string/pay_now"
-            android:layout_height="250dp"
-            android:layout_width="350dp" 
-            android:layout_margin="15dp" 
-            android:layout_gravity="fill"
-            android:clickable="true"
-            android:onClick="onchickenpizza"  />
-        
-                <TextView 
-            android:background="@drawable/thincrust" 
-            android:contentDescription="@string/pay_now"
-            android:layout_height="250dp"
-            android:layout_width="350dp" 
-            android:layout_margin="15dp"
-            android:layout_gravity="fill"
-            android:clickable="true"
-            android:onClick="onthincrust"   />                                              
-                         
-        </GridLayout>
-                </LinearLayout>
-                
-        </ScrollView>
+            android:layout_height="wrap_content">
+
+            <GridLayout
+                android:rowCount="3"
+                android:columnCount="3"
+                style="@style/subMenuGrid">
+
+
+                <TextView
+                    android:contentDescription="@string/pay_now"
+                    android:background="@drawable/cheeseburst"
+                    style="@style/food_item"
+                    android:onClick="oncheeseburst" />
+
+
+                <TextView
+                    android:background="@drawable/veggiedelight"
+                    android:contentDescription="@string/pay_now"
+                    style="@style/food_item"
+                    android:onClick="onveggiedelight" />
+
+                <TextView
+                    android:background="@drawable/italianmix"
+                    android:contentDescription="@string/pay_now"
+                    style="@style/food_item"
+                    android:onClick="onitalianmix" />
+
+                <TextView
+                    android:background="@drawable/makeyourownpizza"
+                    android:contentDescription="@string/pay_now"
+                    style="@style/food_item"
+                    android:onClick="onmakeyourownpizza" />
+
+                <TextView
+                    android:background="@drawable/pepporonipizza"
+                    android:contentDescription="@string/pay_now"
+                    style="@style/food_item"
+                    android:onClick="onpepporonipizza" />
+
+                <TextView
+                    android:background="@drawable/chickenpizza"
+                    android:contentDescription="@string/pay_now"
+                    style="@style/food_item"
+                    android:onClick="onchickenpizza" />
+
+                <TextView
+                    android:background="@drawable/thincrust"
+                    android:contentDescription="@string/pay_now"
+                    style="@style/food_item"
+                    android:onClick="onthincrust" />
+
+            </GridLayout>
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
 
