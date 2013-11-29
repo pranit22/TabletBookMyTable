@@ -32,17 +32,29 @@ public class PaymentActivity extends Activity {
 
         ArrayList<FoodItem> foodItems = new ArrayList<FoodItem>();
 
+        float subtotal = 0f;
+
         for (Map.Entry<String, Integer> entry : ((TabletBookMyTable) getApplicationContext()).overallOrder.entrySet()) {
             FoodItem item = new FoodItem();
             item.setName(entry.getKey());
             item.setQuantity(entry.getValue());
             item.setPrice(Constants.priceMap.get(entry.getKey()));
             foodItems.add(item);
+
+            subtotal += item.getPrice() * item.getQuantity();
         }
 
         ListView listView = (ListView) findViewById(R.id.listView);
         FoodItemListAdapter adapter = new FoodItemListAdapter(this, R.layout.layout_order_item_payment, foodItems);
         listView.setAdapter(adapter);
+
+        DecimalFormat df = new DecimalFormat("#.##");
+        ((TextView)findViewById(R.id.subtotal)).setText("$"+df.format(subtotal));
+        ((TextView)findViewById(R.id.tax)).setText(df.format("$"+subtotal * 0.11f));
+        ((TextView)findViewById(R.id.total)).setText(df.format("$"+subtotal * 1.11f));
+        ((TextView)findViewById(R.id.tip)).setText(df.format("$"+subtotal * 0.2765f));
+        ((TextView)findViewById(R.id.grandtotal)).setText(df.format("$"+subtotal * 1.2765f));
+
     }
 
     class FoodItemListAdapter extends ArrayAdapter<FoodItem> {

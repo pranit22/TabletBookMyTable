@@ -176,7 +176,7 @@
 
                         <TextView
                             style="@style/payment_amounts_value"
-                            android:id="@+id/subtotal"
+                            android:id="@+id/tip"
                             android:text="$34.47"
                             android:layout_gravity="center" />
                     </LinearLayout>
@@ -212,7 +212,7 @@
 
                         <TextView
                             style="@style/payment_amounts_value"
-                            android:id="@+id/subtotal"
+                            android:id="@+id/grandtotal"
                             android:text="$534.47"
                             android:layout_width="230dp"
                             android:gravity="center"
