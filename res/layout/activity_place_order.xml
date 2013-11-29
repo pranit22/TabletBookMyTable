@@ -30,8 +30,7 @@
             android:orientation="horizontal"
             android:padding="5dp"
             android:alpha="0.8"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp">
+            android:layout_gravity="center_horizontal">
 
             <TextView
                 android:text="Item Name"

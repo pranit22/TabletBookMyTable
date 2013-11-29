@@ -103,6 +103,22 @@
         <item name="android:layout_width">80dp</item>
     </style>
 
+    <style name="payment_amounts">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="payment_amounts_caption" parent="payment_amounts">
+        <item name="android:layout_width">150dp</item>
+    </style>
+
+    <style name="payment_amounts_value" parent="payment_amounts">
+        <item name="android:layout_width">80dp</item>
+    </style>
+
     <color name="tap_color">#f5f5f5</color>
     <color name="off_white_color">#eeeeee</color>
     <color name="off_black_color">#333333</color>
@@ -115,6 +131,15 @@
         <item name="android:padding">1dp</item>
         <item name="android:layout_margin">5dp</item>
         <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="payment_amounts_row">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">@color/off_white_color</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:alpha">0.8</item>
     </style>
 
 </resources>
