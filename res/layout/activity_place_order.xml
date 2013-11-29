@@ -18,14 +18,62 @@
             android:gravity="center" />
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/listView"
+    <LinearLayout
+        style="@style/button_background"
+        android:orientation="vertical"
         android:layout_height="fill_parent"
-        android:layout_width="fill_parent"
-        android:gravity="center"
-        android:layout_weight="1"
-        android:layout_marginTop="10dp" />
+        android:layout_weight="1">
 
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:alpha="0.8"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:text="Item Name"
+                android:id="@+id/item_name"
+                android:textColor="@color/off_white_color"
+                style="@style/place_order_item_name" />
+
+            <TextView
+                android:text="Rate"
+                android:id="@+id/item_rate"
+                android:textColor="@color/off_white_color"
+                style="@style/place_order_item_rate" />
+
+            <TextView
+                android:text="Amt."
+                android:id="@+id/item_quantity"
+                android:textColor="@color/off_white_color"
+                style="@style/place_order_item_count" />
+
+            <TextView
+                android:text="Total"
+                android:id="@+id/item_total"
+                android:textColor="@color/off_white_color"
+                style="@style/place_order_item_total" />
+
+            <ImageView
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:layout_marginLeft="20px" />
+
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_height="fill_parent"
+            android:layout_width="695dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_height="wrap_content"

@@ -2,7 +2,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/back">
+    android:background="@drawable/back"
+    >
 
     <LinearLayout
         android:layout_height="wrap_content"
@@ -18,14 +19,54 @@
             android:gravity="center" />
     </LinearLayout>
 
+    <LinearLayout
+        style="@style/button_background"
+        android:orientation="vertical"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:alpha="0.8"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:text="Item Name"
+            android:id="@+id/item_name"
+            android:textColor="@color/off_white_color"
+            style="@style/place_order_item_name_payment" />
+
+        <TextView
+            android:text="Rate"
+            android:id="@+id/item_rate"
+            android:textColor="@color/off_white_color"
+            style="@style/place_order_item_rate_payment" />
+
+        <TextView
+            android:text="Amt."
+            android:id="@+id/item_quantity"
+            android:textColor="@color/off_white_color"
+            style="@style/place_order_item_count_payment" />
+
+        <TextView
+            android:text="Total"
+            android:id="@+id/item_total"
+            android:textColor="@color/off_white_color"
+            style="@style/place_order_item_total_payment" />
+
+    </LinearLayout>
+
     <ListView
         android:id="@+id/listView"
         android:layout_height="fill_parent"
-        android:layout_width="fill_parent"
-        android:gravity="center"
+        android:layout_width="430dp"
+        android:layout_gravity="center"
         android:layout_weight="1"
-        android:layout_marginTop="10dp" />
-
+        android:layout_marginBottom="5dp"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_height="wrap_content"
