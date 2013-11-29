@@ -91,20 +91,16 @@
 
     <style name="place_order_item_name" parent="place_order">
         <item name="android:layout_width">300dp</item>
-        <item name="android:background">#ccff77</item>
         <item name="android:gravity">left</item>
     </style>
     <style name="place_order_item_rate" parent="place_order">
         <item name="android:layout_width">120dp</item>
-        <item name="android:background">#ffcc77</item>
     </style>
     <style name="place_order_item_count" parent="place_order">
         <item name="android:layout_width">80dp</item>
-        <item name="android:background">#ccffff</item>
     </style>
     <style name="place_order_item_total" parent="place_order">
         <item name="android:layout_width">120dp</item>
-        <item name="android:background">#ffff77</item>
     </style>
 
     <color name="tap_color">#f5f5f5</color>
