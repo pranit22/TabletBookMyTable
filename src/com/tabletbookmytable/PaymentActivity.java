@@ -50,10 +50,10 @@ public class PaymentActivity extends Activity {
 
         DecimalFormat df = new DecimalFormat("#.##");
         ((TextView)findViewById(R.id.subtotal)).setText("$"+df.format(subtotal));
-        ((TextView)findViewById(R.id.tax)).setText(df.format("$"+subtotal * 0.11f));
-        ((TextView)findViewById(R.id.total)).setText(df.format("$"+subtotal * 1.11f));
-        ((TextView)findViewById(R.id.tip)).setText(df.format("$"+subtotal * 0.2765f));
-        ((TextView)findViewById(R.id.grandtotal)).setText(df.format("$"+subtotal * 1.2765f));
+        ((TextView)findViewById(R.id.tax)).setText("$"+df.format(subtotal * 0.11f));
+        ((TextView)findViewById(R.id.total)).setText("$"+df.format(subtotal * 1.11f));
+        ((TextView)findViewById(R.id.tip)).setText("$"+df.format(subtotal * 0.1665f));
+        ((TextView)findViewById(R.id.grandtotal)).setText("$"+df.format(subtotal * 1.1665f));
 
     }
 
