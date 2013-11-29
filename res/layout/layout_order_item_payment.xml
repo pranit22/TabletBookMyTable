@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/off_white_color"
+        android:padding="5dp"
+        android:alpha="0.8"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:text="Make your own pizza"
+            android:id="@+id/item_name"
+            style="@style/place_order_item_name_payment" />
+
+        <TextView
+            android:text="$11.99"
+            android:id="@+id/item_rate"
+            style="@style/place_order_item_rate_payment" />
+
+        <TextView
+            android:text="2"
+            android:id="@+id/item_quantity"
+            style="@style/place_order_item_count_payment" />
+
+        <TextView
+            android:text="$23.98"
+            android:id="@+id/item_total"
+            style="@style/place_order_item_total_payment" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>
+

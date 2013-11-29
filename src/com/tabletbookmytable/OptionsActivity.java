@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.Window;
+import android.widget.Toast;
+
+import com.tabletbookmytable.extras.TabletBookMyTable;
 
 public class OptionsActivity extends Activity {
 
@@ -28,7 +31,11 @@ public class OptionsActivity extends Activity {
     }
 
     public void checkoutToPay(View view) {
-        startActivity(new Intent(this, PaymentActivity.class));
+        if (((TabletBookMyTable) getApplicationContext()).overallOrder.isEmpty()) {
+            Toast.makeText(this, "You have not ordered any items yet!", Toast.LENGTH_SHORT).show();
+        } else {
+            startActivity(new Intent(this, PaymentActivity.class));
+        }
     }
 
 }

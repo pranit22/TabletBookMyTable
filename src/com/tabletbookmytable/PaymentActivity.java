@@ -1,11 +1,25 @@
 package com.tabletbookmytable;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.tabletbookmytable.extras.Constants;
+import com.tabletbookmytable.extras.FoodItem;
+import com.tabletbookmytable.extras.TabletBookMyTable;
+
+import java.util.ArrayList;
+import java.util.Map;
 
 public class PaymentActivity extends Activity {
 
@@ -14,6 +28,53 @@ public class PaymentActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_payment);
+
+        ArrayList<FoodItem> foodItems = new ArrayList<FoodItem>();
+
+        for (Map.Entry<String, Integer> entry : ((TabletBookMyTable) getApplicationContext()).overallOrder.entrySet()) {
+            FoodItem item = new FoodItem();
+            item.setName(entry.getKey());
+            item.setQuantity(entry.getValue());
+            item.setPrice(Constants.priceMap.get(entry.getKey()));
+            foodItems.add(item);
+        }
+
+        ListView listView = (ListView) findViewById(R.id.listView);
+        FoodItemListAdapter adapter = new FoodItemListAdapter(this, R.layout.layout_order_item_payment, foodItems);
+        listView.setAdapter(adapter);
+    }
+
+    class FoodItemListAdapter extends ArrayAdapter<FoodItem> {
+
+        private ArrayList<FoodItem> items;
+
+        public FoodItemListAdapter(Context context, int textViewResourceId, ArrayList<FoodItem> items) {
+            super(context, textViewResourceId, items);
+            this.items = items;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            final int finalPosition = position;
+            View v = convertView;
+            if (v == null) {
+                LayoutInflater vi = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.layout_order_item_payment, null);
+            }
+            final FoodItem o = items.get(position);
+            if (o != null) {
+                TextView name = (TextView) v.findViewById(R.id.item_name);
+                TextView rate = (TextView) v.findViewById(R.id.item_rate);
+                TextView quantity = (TextView) v.findViewById(R.id.item_quantity);
+                TextView total = (TextView) v.findViewById(R.id.item_total);
+
+                name.setText(o.getName());
+                rate.setText("$"+Float.toString(o.getPrice()));
+                quantity.setText("X " + Integer.toString(o.getQuantity()));
+                total.setText("$"+Float.toString(o.getPrice() * o.getQuantity()));
+            }
+            return v;
+        }
     }
 
     public void cancelPayment(View view) {

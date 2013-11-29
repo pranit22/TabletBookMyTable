@@ -22,7 +22,7 @@
 
         <Button
         android:text="@string/check_in"
-        style="@style/main_button_tablet"
+        style="@style/big_button"
         android:onClick="checkIn" />
 
     </LinearLayout>

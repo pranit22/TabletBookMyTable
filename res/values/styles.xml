@@ -17,7 +17,7 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
-    <style name="main_button_tablet">
+    <style name="big_button">
         <item name="android:layout_height">100dp</item>
         <item name="android:layout_width">500dp</item>
         <item name="android:gravity">center</item>
@@ -26,42 +26,22 @@
         <item name="android:drawablePadding">10dp</item>
     </style>
 
-    <style name="order_button_tablet">
+    <style name="medium_button">
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_width">300dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <style name="normal_button">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:padding">15dp</item>
-        <item name="android:drawablePadding">10dp</item>
-    </style>
-
-    <style name="checkout_button_tablet">
-        <item name="android:layout_height">100dp</item>
-        <item name="android:layout_width">400dp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:drawablePadding">10dp</item>
-        <item name="android:layout_marginBottom">40dp</item>
-        <item name="android:layout_marginLeft">400dp</item>
-    </style>
-
-    <style name="pay_button_tablet">
-        <item name="android:layout_height">100dp</item>
-        <item name="android:layout_width">500dp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:drawablePadding">10dp</item>
-    </style>
-
-    <style name="big_button">
-        <item name="android:layout_height">120dp</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:gravity">left|center_vertical</item>
-        <item name="android:textSize">30sp</item>
-        <item name="android:textStyle">bold</item>
         <item name="android:drawablePadding">10dp</item>
     </style>
 
@@ -78,7 +58,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:orientation">horizontal</item>
     </style>
-    
+
     <style name="place_order">
         <item name="android:textSize">30sp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -99,6 +79,28 @@
     </style>
     <style name="place_order_item_total" parent="place_order">
         <item name="android:layout_width">120dp</item>
+    </style>
+
+    <style name="place_order_payment">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="place_order_item_name_payment" parent="place_order_payment">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:gravity">left</item>
+    </style>
+    <style name="place_order_item_rate_payment" parent="place_order_payment">
+        <item name="android:layout_width">80dp</item>
+    </style>
+    <style name="place_order_item_count_payment" parent="place_order_payment">
+        <item name="android:layout_width">55dp</item>
+    </style>
+    <style name="place_order_item_total_payment" parent="place_order_payment">
+        <item name="android:layout_width">80dp</item>
     </style>
 
     <color name="tap_color">#f5f5f5</color>

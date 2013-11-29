@@ -27,7 +27,7 @@
         android:drawableRight="@drawable/nfc"
         android:padding="10dp"
         android:alpha="0.6"
-        style="@style/main_button_tablet"
+        style="@style/big_button"
         android:textColor="@color/off_black_color"
         />
     </LinearLayout>

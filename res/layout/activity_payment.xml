@@ -24,7 +24,7 @@
         android:layout_width="fill_parent"
         android:gravity="center"
         android:layout_weight="1"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="10dp" />
 
 
     <LinearLayout
@@ -32,14 +32,14 @@
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:gravity="center"
-        android:padding="10dp">
+        android:padding="5dp">
 
         <LinearLayout style="@style/button_background">
 
             <Button
                 android:id="@+id/button1"
                 android:text="Back"
-                style="@style/order_button_tablet"
+                style="@style/normal_button"
                 android:onClick="cancelPayment"
                 android:drawableLeft="@drawable/icon_arrow_left" />
         </LinearLayout>
@@ -49,7 +49,7 @@
             <Button
                 android:id="@+id/button1"
                 android:text="Pay Now"
-                style="@style/order_button_tablet"
+                style="@style/normal_button"
                 android:onClick="pay"
                 android:drawableLeft="@drawable/icon_credit_card" />
         </LinearLayout>

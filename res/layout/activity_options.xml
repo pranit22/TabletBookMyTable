@@ -8,39 +8,44 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/back"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="0dip"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:alpha="0.8"
-            android:layout_marginTop="5dp"
-            android:contentDescription="@string/logo"
-            android:src="@drawable/logo" />
-  
-<LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content" >
-    
-        <Button
-        android:id="@+id/button1"
-        android:text="@string/order"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
         android:layout_gravity="center"
-        style="@style/order_button_tablet"
-        android:onClick="orderFood"
-         /> 
-         
-        <Button
-        android:id="@+id/button2"
-        android:text="@string/checkout"
-        android:layout_gravity="center"
-        style="@style/checkout_button_tablet"
-        android:onClick="checkoutToPay"
-         /> 
-  </LinearLayout>
-    
+        android:layout_weight="1"
+        android:alpha="0.8"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout style="@style/button_background">
+
+            <Button
+                android:id="@+id/button1"
+                android:text="@string/order"
+                android:layout_gravity="center"
+                style="@style/medium_button"
+                android:onClick="orderFood" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/button_background">
+
+            <Button
+                android:id="@+id/button2"
+                android:text="@string/checkout"
+                android:layout_gravity="center"
+                style="@style/medium_button"
+                android:onClick="checkoutToPay" />
+        </LinearLayout>
     </LinearLayout>
+
+</LinearLayout>

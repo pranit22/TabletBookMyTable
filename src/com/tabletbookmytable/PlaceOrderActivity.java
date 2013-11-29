@@ -75,9 +75,9 @@ public class PlaceOrderActivity extends Activity {
                 TextView total = (TextView) v.findViewById(R.id.item_total);
 
                 name.setText(o.getName());
-                rate.setText(Float.toString(o.getPrice()));
+                rate.setText("$"+Float.toString(o.getPrice()));
                 quantity.setText("X "+Integer.toString(o.getQuantity()));
-                total.setText(Float.toString(o.getPrice() * o.getQuantity()));
+                total.setText("$"+Float.toString(o.getPrice() * o.getQuantity()));
 
                 final Context context = getApplicationContext();
 
