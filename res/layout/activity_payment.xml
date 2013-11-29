@@ -2,7 +2,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="10dp"
     android:background="@drawable/back">
 
     <LinearLayout
@@ -32,21 +31,28 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:padding="10dp">
 
-        <Button
-            android:id="@+id/button1"
-            android:text="Back"
-            style="@style/order_button_tablet"
-            android:onClick="cancelPayment"
-            android:drawableLeft="@drawable/icon_arrow_left" />
+        <LinearLayout style="@style/button_background">
 
-        <Button
-            android:id="@+id/button1"
-            android:text="Pay Now"
-            style="@style/order_button_tablet"
-            android:onClick="pay"
-            android:drawableLeft="@drawable/icon_credit_card" />
+            <Button
+                android:id="@+id/button1"
+                android:text="Back"
+                style="@style/order_button_tablet"
+                android:onClick="cancelPayment"
+                android:drawableLeft="@drawable/icon_arrow_left" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/button_background">
+
+            <Button
+                android:id="@+id/button1"
+                android:text="Pay Now"
+                style="@style/order_button_tablet"
+                android:onClick="pay"
+                android:drawableLeft="@drawable/icon_credit_card" />
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>

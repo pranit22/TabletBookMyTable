@@ -17,14 +17,14 @@
             android:contentDescription="@string/logo"
             android:src="@drawable/logo" />
   
-    
+
+    <LinearLayout style="@style/button_background">
+
         <Button
-        android:id="@+id/button1"
         android:text="@string/check_in"
-        android:layout_gravity="center"
         style="@style/main_button_tablet"
-        android:onClick="checkIn"
-         /> 
-    
+        android:onClick="checkIn" />
+
+    </LinearLayout>
     
     </LinearLayout>

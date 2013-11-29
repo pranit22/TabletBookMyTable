@@ -15,23 +15,22 @@
             android:alpha="0.8"
             android:contentDescription="@string/logo"
             android:src="@drawable/logo" />
-  
-    
-        <TextView
-        android:id="@+id/textview1"
+
+    <LinearLayout style="@style/button_background"
+        android:padding="10px">
+
+    <TextView
         android:text="@string/tap"
-        android:layout_gravity="center"
         android:textSize="30sp"
         android:background="@color/tap_color"
-        android:alpha="0.8"
         android:drawableLeft="@drawable/nfc"
         android:drawableRight="@drawable/nfc"
         android:padding="10dp"
+        android:alpha="0.6"
         style="@style/main_button_tablet"
-        android:onClick="testing"
- 
-         /> 
-    
+        android:textColor="@color/off_black_color"
+        />
+    </LinearLayout>
 
     
     </LinearLayout>

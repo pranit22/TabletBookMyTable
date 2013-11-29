@@ -2,7 +2,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="10dp"
     android:background="@drawable/back">
 
     <LinearLayout
@@ -10,13 +9,13 @@
         android:layout_width="match_parent"
         android:background="@android:color/black"
         android:padding="10dp">
+
         <TextView
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:text="Your Order"
             android:textSize="30sp"
-            android:gravity="center"
-            />
+            android:gravity="center" />
     </LinearLayout>
 
     <ListView
@@ -25,35 +24,45 @@
         android:layout_width="fill_parent"
         android:gravity="center"
         android:layout_weight="1"
-        android:layout_marginTop="20dp"/>
+        android:layout_margin="10dp" />
 
 
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:padding="10dp">
 
-        <Button
-            android:id="@+id/button1"
-            android:text="Order"
-            style="@style/order_button_tablet"
-            android:onClick="order"
-            android:drawableLeft="@drawable/tick" />
+        <LinearLayout style="@style/button_background">
 
-        <Button
-            android:id="@+id/button1"
-            android:text="Add More Items"
-            style="@style/order_button_tablet"
-            android:onClick="addMore"
-            android:drawableLeft="@drawable/icon_add" />
+            <Button
+                android:id="@+id/button1"
+                android:text="Order"
+                style="@style/order_button_tablet"
+                android:onClick="order"
+                android:drawableLeft="@drawable/tick" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/button1"
-            android:text="Remove All"
-            style="@style/order_button_tablet"
-            android:onClick="removeAll"
-            android:drawableLeft="@drawable/icon_exit" />
+        <LinearLayout style="@style/button_background">
+
+            <Button
+                android:id="@+id/button1"
+                android:text="Add More Items"
+                style="@style/order_button_tablet"
+                android:onClick="addMore"
+                android:drawableLeft="@drawable/icon_add" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/button_background">
+
+            <Button
+                android:id="@+id/button1"
+                android:text="Remove All"
+                style="@style/order_button_tablet"
+                android:onClick="removeAll"
+                android:drawableLeft="@drawable/icon_exit" />
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>
