@@ -186,7 +186,7 @@ public class TabbedMenuActivity extends FragmentActivity implements
     }
 
     public void oncheeseburst(View view) {
-        FoodItemDialog.generateDialog(getLayoutInflater(), this, "Cheeseburst");
+        FoodItemDialog.generateDialog(getLayoutInflater(), this, "Cheese Burst");
     }
 
     public void onveggiedelight(View view) {
