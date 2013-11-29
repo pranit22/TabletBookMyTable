@@ -84,8 +84,15 @@ public class PlaceOrderActivity extends Activity {
                     @Override
                     public void onClick(View view) {
                         ((TabletBookMyTable) getApplicationContext()).currentOrder.remove(o.getName());
-                        Toast.makeText(context, o.getName() + " removed from your order!", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getContext(), PlaceOrderActivity.class));
+                        if(((TabletBookMyTable) getApplicationContext()).currentOrder.isEmpty()) {
+                            Toast.makeText(context, o.getName() + " removed from your order!" +
+                                    "\nYou have no items left in the order!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getContext(), OptionsActivity.class));
+                        }
+                        else {
+                            Toast.makeText(context, o.getName() + " removed from your order!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getContext(), PlaceOrderActivity.class));
+                        }
                     }
                 });
             }

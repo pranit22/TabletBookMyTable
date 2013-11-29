@@ -9,14 +9,16 @@
     tools:context=".PaymentActivity">
 
     <LinearLayout
-        android:layout_height="75dp"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:background="@android:color/black">
+        android:background="@android:color/black"
+        android:padding="20dp">
         <TextView
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="Welcome Text and other texts (removed activity name)"
+            android:text="Menu"
             android:textSize="30sp"
+            android:gravity="center"
             />
         </LinearLayout>
 

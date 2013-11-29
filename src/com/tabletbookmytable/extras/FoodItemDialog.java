@@ -45,7 +45,7 @@ public class FoodItemDialog {
                 } else {
                     track_food.put(foodTitle, count + track_food.get(foodTitle));
                 }
-                Toast.makeText(finalContext, foodTitle + " (quantity: " + count + ")has been added to the order successfully!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(finalContext, foodTitle + " (quantity: " + count + ") has been added to the order successfully!", Toast.LENGTH_LONG).show();
                 alertDialog.dismiss();
             }
         });

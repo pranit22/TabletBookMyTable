@@ -8,8 +8,10 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.Toast;
 
 import com.tabletbookmytable.extras.FoodItemDialog;
+import com.tabletbookmytable.extras.TabletBookMyTable;
 
 
 public class TabbedMenuActivity extends FragmentActivity implements
@@ -233,17 +235,36 @@ public class TabbedMenuActivity extends FragmentActivity implements
 
     @Override
     public void onTabReselected(Tab tab, FragmentTransaction ft) {
+        if (tab.getPosition() == 6) {
+            if (((TabletBookMyTable) getApplicationContext()).currentOrder.isEmpty()) {
+                Toast.makeText(this, "You have not added any items in the cart!", Toast.LENGTH_SHORT).show();
+            } else {
+                startActivity(new Intent(this, PlaceOrderActivity.class));
+            }
+        } else if (tab.getPosition() == 7) {
+            if (((TabletBookMyTable) getApplicationContext()).overallOrder.isEmpty()) {
+                Toast.makeText(this, "You have not ordered any items yet!", Toast.LENGTH_SHORT).show();
+            } else {
+                startActivity(new Intent(this, PaymentActivity.class));
+            }
+        }
     }
 
     @Override
     public void onTabSelected(Tab tab, FragmentTransaction ft) {
         if (tab.getPosition() == 6) {
-            startActivity(new Intent(this, PlaceOrderActivity.class));
-        }
-        else if (tab.getPosition() == 7) {
-            startActivity(new Intent(this, PaymentActivity.class));
-        }
-        else {
+            if (((TabletBookMyTable) getApplicationContext()).currentOrder.isEmpty()) {
+                Toast.makeText(this, "You have not added any items in the cart!", Toast.LENGTH_SHORT).show();
+            } else {
+                startActivity(new Intent(this, PlaceOrderActivity.class));
+            }
+        } else if (tab.getPosition() == 7) {
+            if (((TabletBookMyTable) getApplicationContext()).overallOrder.isEmpty()) {
+                Toast.makeText(this, "You have not ordered any items yet!", Toast.LENGTH_SHORT).show();
+            } else {
+                startActivity(new Intent(this, PaymentActivity.class));
+            }
+        } else {
             viewPager.setCurrentItem(tab.getPosition());
         }
     }
