@@ -238,7 +238,7 @@ public class TabbedMenuActivity extends FragmentActivity implements
     @Override
     public void onTabSelected(Tab tab, FragmentTransaction ft) {
         if (tab.getPosition() == 6) {
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, PlaceOrderActivity.class));
         }
         else if (tab.getPosition() == 7) {
             startActivity(new Intent(this, PaymentActivity.class));
