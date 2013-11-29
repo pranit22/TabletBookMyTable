@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.tabletbookmytable.R;
 
@@ -18,18 +19,18 @@ import java.util.Map;
 public class FoodItemDialog {
     public static void generateDialog(LayoutInflater inflater, Context context, String title) {
         final View dialogLayout = inflater.inflate(R.layout.popup, null);
-        if(((TabletBookMyTable) context.getApplicationContext()).track_food == null) {
+        if (((TabletBookMyTable) context.getApplicationContext()).track_food == null) {
             ((TabletBookMyTable) context.getApplicationContext()).track_food = new HashMap<String, Integer>();
         }
-        final Map<String, Integer> track_food =  ((TabletBookMyTable) context.getApplicationContext()).track_food;
+        final Map<String, Integer> track_food = ((TabletBookMyTable) context.getApplicationContext()).track_food;
         final String foodTitle = title;
+        final Context finalContext = context;
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setIcon(R.drawable.tick);
         builder.setTitle(foodTitle);
         builder.setView(dialogLayout);
 
-        AlertDialog alertDialog = builder.create();
+        final AlertDialog alertDialog = builder.create();
         alertDialog.show();
         alertDialog.getWindow().setLayout(860, 350);
 
@@ -39,12 +40,21 @@ public class FoodItemDialog {
             @Override
             public void onClick(View v) {
                 int count = Integer.parseInt(((Spinner) dialogLayout.findViewById(R.id.foodcountspinner)).getSelectedItem().toString());
-                if(!track_food.containsKey(foodTitle)) {
+                if (!track_food.containsKey(foodTitle)) {
                     track_food.put(foodTitle, count);
-                }
-                else {
+                } else {
                     track_food.put(foodTitle, count + track_food.get(foodTitle));
                 }
+                Toast.makeText(finalContext, foodTitle + " (quantity: " + count + ")has been added to the order successfully!", Toast.LENGTH_SHORT).show();
+                alertDialog.dismiss();
+            }
+        });
+
+        Button cancel = (Button) dialogLayout.findViewById(R.id.cancelbutton);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
             }
         });
     }
