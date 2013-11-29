@@ -1,15 +1,19 @@
 package com.tabletbookmytable;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -80,6 +84,7 @@ public class PlaceOrderActivity extends Activity {
                     @Override
                     public void onClick(View view) {
                         ((TabletBookMyTable) getApplicationContext()).currentOrder.remove(o.getName());
+                        Toast.makeText(context, o.getName() + " removed from your order!", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(getContext(), PlaceOrderActivity.class));
                     }
                 });
@@ -102,5 +107,41 @@ public class PlaceOrderActivity extends Activity {
         }
         currentOrder.clear();
         startActivity(new Intent(this, OptionsActivity.class));
+    }
+
+    public void addMore(View view) {
+        startActivity(new Intent(this, SubMenuActivity.class));
+    }
+
+    public void removeAll(View view) {
+
+        final Context context = this;
+        final View dialogLayout = getLayoutInflater().inflate(R.layout.confirm, null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Are you sure?");
+        builder.setView(dialogLayout);
+
+        final AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+        alertDialog.getWindow().setLayout(600, 400);
+
+        Button add = (Button) dialogLayout.findViewById(R.id.addbutton);
+        add.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Your order has been cancelled!", Toast.LENGTH_SHORT).show();
+                ((TabletBookMyTable) getApplicationContext()).currentOrder.clear();
+                startActivity(new Intent(context, OptionsActivity.class));
+            }
+        });
+
+        Button cancel = (Button) dialogLayout.findViewById(R.id.cancelbutton);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
     }
 }
