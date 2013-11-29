@@ -27,7 +27,7 @@ public class FoodItemDialog {
         final Context finalContext = context;
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(foodTitle);
+        builder.setTitle(foodTitle + " - $" + Constants.priceMap.get(foodTitle));
         builder.setView(dialogLayout);
 
         final AlertDialog alertDialog = builder.create();

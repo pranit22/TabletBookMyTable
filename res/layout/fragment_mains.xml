@@ -43,7 +43,7 @@
                     android:contentDescription="@string/pay_now"
                     android:background="@drawable/butterchicken"
                     style="@style/food_item"
-                    android:clickable="true" />
+                    android:onClick="onbutterchicken" />
 
                 <TextView
                     android:background="@drawable/chillinoodles"

@@ -55,8 +55,6 @@ public class TabbedMenuActivity extends FragmentActivity implements
 
             @Override
             public void onPageSelected(int position) {
-                // on changing the page
-                // make respected tab selected
                 actionBar.setSelectedNavigationItem(position);
             }
 

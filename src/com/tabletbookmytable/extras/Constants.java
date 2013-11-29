@@ -1,5 +1,6 @@
 package com.tabletbookmytable.extras;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -9,6 +10,7 @@ public class Constants {
     public static Map<String, Float> priceMap;
 
     static {
+        priceMap = new HashMap<String, Float>();
         priceMap.put("Bread Sticks", 3.49f);
         priceMap.put("Bruschetta", 4.99f);
         priceMap.put("Chicken Strips", 5.49f);
