@@ -18,6 +18,7 @@ import com.tabletbookmytable.extras.Constants;
 import com.tabletbookmytable.extras.FoodItem;
 import com.tabletbookmytable.extras.TabletBookMyTable;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -68,10 +69,11 @@ public class PaymentActivity extends Activity {
                 TextView quantity = (TextView) v.findViewById(R.id.item_quantity);
                 TextView total = (TextView) v.findViewById(R.id.item_total);
 
+                DecimalFormat df = new DecimalFormat("#.##");
                 name.setText(o.getName());
-                rate.setText("$"+Float.toString(o.getPrice()));
+                rate.setText("$"+df.format(o.getPrice()));
                 quantity.setText("X " + Integer.toString(o.getQuantity()));
-                total.setText("$"+Float.toString(o.getPrice() * o.getQuantity()));
+                total.setText("$"+df.format(o.getPrice() * o.getQuantity()));
             }
             return v;
         }
