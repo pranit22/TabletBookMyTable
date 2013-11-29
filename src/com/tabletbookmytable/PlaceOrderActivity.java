@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -30,6 +31,7 @@ public class PlaceOrderActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_place_order);
 
         ArrayList<FoodItem> foodItems = new ArrayList<FoodItem>();
@@ -74,7 +76,7 @@ public class PlaceOrderActivity extends Activity {
 
                 name.setText(o.getName());
                 rate.setText(Float.toString(o.getPrice()));
-                quantity.setText(Integer.toString(o.getQuantity()));
+                quantity.setText("X "+Integer.toString(o.getQuantity()));
                 total.setText(Float.toString(o.getPrice() * o.getQuantity()));
 
                 final Context context = getApplicationContext();
