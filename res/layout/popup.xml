@@ -1,46 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:layout_gravity="center" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="horizontal">
 
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:text="Quantity: "
+        android:textSize="20dp"
+        android:gravity="center_vertical"/>
     <Spinner
         android:id="@+id/foodcountspinner"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:textSize="20dp"
-		android:gravity="center_horizontal"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:textSize="25sp"
+        android:gravity="center"
         android:entries="@array/qty" />
 
-    <LinearLayout
-        android:id="@+id/button_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/foodcountspinner"
-        android:layout_marginTop="15dp" >
+    <Button
+        android:id="@+id/addbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableLeft="@drawable/tick"
+        android:text="ADD" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/foodcountspinner"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/icon_exit"
-            android:text="CANCEL" />
-
-        <Button
-            android:id="@+id/addbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/button2"
-            android:layout_alignBottom="@+id/button2"
-            android:layout_alignParentRight="true"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/tick"
-            android:text="ADD" />
-
-    </LinearLayout>
-
-</RelativeLayout>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableLeft="@drawable/icon_exit"
+        android:text="CANCEL" />
+</LinearLayout>
