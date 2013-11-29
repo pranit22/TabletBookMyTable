@@ -19,10 +19,10 @@ import java.util.Map;
 public class FoodItemDialog {
     public static void generateDialog(LayoutInflater inflater, Context context, String title) {
         final View dialogLayout = inflater.inflate(R.layout.popup, null);
-        if (((TabletBookMyTable) context.getApplicationContext()).track_food == null) {
-            ((TabletBookMyTable) context.getApplicationContext()).track_food = new HashMap<String, Integer>();
+        if (((TabletBookMyTable) context.getApplicationContext()).currentOrder == null) {
+            ((TabletBookMyTable) context.getApplicationContext()).currentOrder = new HashMap<String, Integer>();
         }
-        final Map<String, Integer> track_food = ((TabletBookMyTable) context.getApplicationContext()).track_food;
+        final Map<String, Integer> track_food = ((TabletBookMyTable) context.getApplicationContext()).currentOrder;
         final String foodTitle = title;
         final Context finalContext = context;
 

@@ -1,81 +1,45 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingBottom="10dp"
-    android:background="@drawable/back" >
+    android:background="@drawable/back">
 
-    <ScrollView
+
+    <ListView
+        android:id="@+id/listView"
         android:layout_height="fill_parent"
         android:layout_width="fill_parent"
-        android:layout_weight="1">
-        <LinearLayout
-            android:layout_height="match_parent"
-            android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center_horizontal">
-
-            <LinearLayout
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Make your own pizza"
-                    android:id="@+id/item_name"
-                    style="@style/place_order_item_name"
-                    />
-                <TextView
-                    android:text="$11.99"
-                    android:id="@+id/item_rate"
-                    style="@style/place_order_item_rate"/>
-                <TextView
-                    android:text="2"
-                    android:id="@+id/item_quantity"
-                    style="@style/place_order_item_count"/>
-                <TextView
-                    android:text="23.98"
-                    android:id="@+id/item_total"
-                    style="@style/place_order_item_total"/>
-                <Button
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="Remove"
-                    android:drawableLeft="@drawable/icon_exit"
-                    android:drawablePadding="20dp"
-                    android:layout_gravity="center_vertical"/>
-                </LinearLayout>
-            </LinearLayout>
-        </ScrollView>
+        android:gravity="center"
+        android:layout_weight="1" />
 
 
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
 
-<LinearLayout
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:gravity="center">
-    <Button
-        android:id="@+id/button1"
-        android:text="Order"
-        style="@style/order_button_tablet"
-        android:onClick="order"
-        android:drawableLeft="@drawable/tick"
-        />
-    <Button
-        android:id="@+id/button1"
-        android:text="Add More Items"
-        style="@style/order_button_tablet"
-        android:onClick="addMore"
-        android:drawableLeft="@drawable/icon_add"
-        />
-    <Button
-        android:id="@+id/button1"
-        android:text="Remove All"
-        style="@style/order_button_tablet"
-        android:onClick="removeAll"
-        android:drawableLeft="@drawable/icon_exit"
-        />
+        <Button
+            android:id="@+id/button1"
+            android:text="Order"
+            style="@style/order_button_tablet"
+            android:onClick="order"
+            android:drawableLeft="@drawable/tick" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/button1"
+            android:text="Add More Items"
+            style="@style/order_button_tablet"
+            android:onClick="addMore"
+            android:drawableLeft="@drawable/icon_add" />
+
+        <Button
+            android:id="@+id/button1"
+            android:text="Remove All"
+            style="@style/order_button_tablet"
+            android:onClick="removeAll"
+            android:drawableLeft="@drawable/icon_exit" />
+
+    </LinearLayout>
 </LinearLayout>
