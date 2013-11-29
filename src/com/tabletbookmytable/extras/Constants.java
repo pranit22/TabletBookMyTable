@@ -8,6 +8,7 @@ import java.util.Map;
  */
 public class Constants {
     public static Map<String, Float> priceMap;
+    public static final float TAX = 0.12f;
 
     static {
         priceMap = new HashMap<String, Float>();
