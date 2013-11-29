@@ -3,6 +3,7 @@ package com.tabletbookmytable;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
@@ -23,25 +24,32 @@ public class TabbedMenuActivity extends FragmentActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabbed_menu);
 
-        // Initilization
         viewPager = (ViewPager) findViewById(R.id.pager);
         actionBar = getActionBar();
         mAdapter = new TabsPages(getSupportFragmentManager());
 
         viewPager.setAdapter(mAdapter);
         actionBar.setHomeButtonEnabled(false);
+        actionBar.setDisplayShowHomeEnabled(false);
+        actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-        // Adding Tabs/****//**//******/
         for (String tab_name : tabs) {
             actionBar.addTab(actionBar.newTab().setText(tab_name)
                     .setTabListener(this));
         }
 
+        // Place order tab
+        Tab placeOrderTab = actionBar.newTab();
+        placeOrderTab.setTabListener(this);
+        placeOrderTab.setText("Place Order");
+        actionBar.addTab(placeOrderTab);
 
-        getActionBar().setDisplayShowHomeEnabled(false);
-
-        getActionBar().setDisplayShowTitleEnabled(false);
+        // Checkout order tab
+        Tab checkoutTab = actionBar.newTab();
+        checkoutTab.setTabListener(this);
+        checkoutTab.setText("Checkout");
+        actionBar.addTab(checkoutTab);
 
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
@@ -227,21 +235,23 @@ public class TabbedMenuActivity extends FragmentActivity implements
 
     @Override
     public void onTabReselected(Tab tab, FragmentTransaction ft) {
-        // TODO Auto-generated method stub
-
     }
 
     @Override
     public void onTabSelected(Tab tab, FragmentTransaction ft) {
-        // TODO Auto-generated method stub
-        viewPager.setCurrentItem(tab.getPosition());
-
+        if (tab.getPosition() == 6) {
+            startActivity(new Intent(this, MainActivity.class));
+        }
+        else if (tab.getPosition() == 7) {
+            startActivity(new Intent(this, PaymentActivity.class));
+        }
+        else {
+            viewPager.setCurrentItem(tab.getPosition());
+        }
     }
 
     @Override
     public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-        // TODO Auto-generated method stub
-
     }
 
 }

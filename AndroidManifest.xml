@@ -9,15 +9,14 @@
         android:targetSdkVersion="18" />
 
     <application
+        android:name="com.tabletbookmytable.extras.TabletBookMyTable"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:name=".extras.TabletBookMyTable">
+        android:theme="@style/AppTheme" >
         <activity
             android:name="com.tabletbookmytable.MainActivity"
             android:label="@string/app_name" >
-
         </activity>
         <activity
             android:name="com.tabletbookmytable.TapYourDeviceActivity"
@@ -34,8 +33,7 @@
         <activity
             android:name="com.tabletbookmytable.SubMenuActivity"
             android:label="@string/title_activity_sub_menu" >
-            
-                        <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -48,7 +46,10 @@
         <activity
             android:name="com.tabletbookmytable.TabbedMenuActivity"
             android:label="@string/title_activity_payment" >
-
+        </activity>
+        <activity
+            android:name="com.tabletbookmytable.PlaceOrderActivity"
+            android:label="@string/title_activity_place_order" >
         </activity>
     </application>
 

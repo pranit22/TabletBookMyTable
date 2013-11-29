@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string-array name="qty">
+
+    <string-array name="qty">
         <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
     </string-array>
+
     <string name="app_name">TabletBookMyTable</string>
     <string name="action_settings">Settings</string>
     <string name="logo">Logo</string>
@@ -27,8 +29,7 @@
     <string name="title_section3">CCC</string>
     <string name="tip">00.00</string>
     <string name="payment">Payment Details</string>
-    <string name="bill_details">
-        \t\t--------------------------------------------------------------------------------------------------\n
+    <string name="bill_details">        \t\t--------------------------------------------------------------------------------------------------\n
        \t\t\t \t1\t\t\tx\t\t\tPizza\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$11.99\n
        \t\t\t \t2\t\t\tx\t\t\tPasta\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$15.98\n
        \t\t\t \t2\t\t\tx\t\t\tBruschetta\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$11.98\n
@@ -38,11 +39,9 @@
         \t\t--------------------------------------------------------------------------------------------------\n
      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tGrandtotal:\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$43.90\n
      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTip:\n</string>
-     <string name="bill_details_final">
-     \t\t--------------------------------------------------------------------------------------------------\n
+    <string name="bill_details_final">     \t\t--------------------------------------------------------------------------------------------------\n
          \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPayment Amount:\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$48.90\n
-           \t\t--------------------------------------------------------------------------------------------------\n
-    </string>
-    
+           \t\t--------------------------------------------------------------------------------------------------\n</string>
+    <string name="title_activity_place_order">PlaceOrderActivity</string>
 
 </resources>

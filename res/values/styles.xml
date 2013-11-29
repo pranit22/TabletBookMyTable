@@ -84,5 +84,6 @@
     </style>
 
     <color name="tap_color">#f5f5f5</color>
+    <color name="green_color">#f5f5f5</color>
 
 </resources>
