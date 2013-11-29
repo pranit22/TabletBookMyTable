@@ -8,9 +8,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
-import com.tabletbookmytable.com.tabletbookmytable.extras.FoodItemDialog;
-
-import java.util.HashMap;
+import com.tabletbookmytable.extras.FoodItemDialog;
 
 
 public class TabbedMenuActivity extends FragmentActivity implements
@@ -18,8 +16,6 @@ public class TabbedMenuActivity extends FragmentActivity implements
     private ViewPager viewPager;
     private TabsPages mAdapter;
     private ActionBar actionBar;
-    public HashMap<String, String> track_food = new HashMap<String, String>();
-    // Tab titles
     private String[] tabs = {"Appetizers", "Beverages", "Salads", "Mains", "Pizzas", "Desserts"};
 
     @Override
