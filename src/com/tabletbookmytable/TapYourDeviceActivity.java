@@ -15,6 +15,8 @@ import java.nio.charset.Charset;
 
 public class TapYourDeviceActivity extends Activity implements NfcAdapter.CreateNdefMessageCallback {
 
+    NfcAdapter mNfcAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +24,7 @@ public class TapYourDeviceActivity extends Activity implements NfcAdapter.Create
         setContentView(R.layout.activity_tap_your_device);
 
         if (getIntent().hasExtra("isPayment")) {
-            NfcAdapter mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
+            mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
             mNfcAdapter.setNdefPushMessageCallback(this, this);
 
         }
@@ -34,7 +36,7 @@ public class TapYourDeviceActivity extends Activity implements NfcAdapter.Create
 
         NdefMessage msg = new NdefMessage(
                 new NdefRecord[]{createMimeRecord(
-                        "application/com.bookmytable.amount", amount.getBytes())
+                        "application/com.tabletbookmytable.amount", amount.getBytes())
                         , NdefRecord.createApplicationRecord("com.bookmytable")
                 });
         return msg;
