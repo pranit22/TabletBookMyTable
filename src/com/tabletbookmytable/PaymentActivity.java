@@ -109,6 +109,7 @@ public class PaymentActivity extends Activity {
 
     public void pay(View view) {
         Intent intent = new Intent(this, TapYourDeviceActivity.class);
+        intent.putExtra("amount", ((TextView) findViewById(R.id.grandtotal)).getText().toString());
         intent.putExtra("isPayment", true);
         startActivity(intent);
     }
