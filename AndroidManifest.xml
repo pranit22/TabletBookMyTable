@@ -52,6 +52,15 @@
         <activity
             android:name="com.tabletbookmytable.PlaceOrderActivity"
             android:label="@string/title_activity_place_order"></activity>
+        <activity
+            android:name="com.tabletbookmytable.GreetingsActivity"
+            android:label="@string/title_activity_greetings">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/com.tabletbookmytable.confirm" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

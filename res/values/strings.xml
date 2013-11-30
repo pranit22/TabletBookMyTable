@@ -43,5 +43,6 @@
          \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPayment Amount:\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$48.90\n
            \t\t--------------------------------------------------------------------------------------------------\n</string>
     <string name="title_activity_place_order">PlaceOrderActivity</string>
+    <string name="title_activity_greetings">GreetingsActivity</string>
 
 </resources>

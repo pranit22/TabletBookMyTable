@@ -48,16 +48,4 @@ public class TapYourDeviceActivity extends Activity implements NfcAdapter.Create
                 mimeBytes, new byte[0], payload);
         return mimeRecord;
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.tap_your_device, menu);
-        return true;
-    }
-
-    public void testing(View view) {
-        startActivity(new Intent(this, OptionsActivity.class));
-    }
-
 }

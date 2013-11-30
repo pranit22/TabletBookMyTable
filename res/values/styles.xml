@@ -123,6 +123,7 @@
     <color name="off_white_color">#eeeeee</color>
     <color name="off_black_color">#333333</color>
     <color name="off_black_color_transparent">#cc333333</color>
+    <color name="off_white_color_transparent">#99eeeeee</color>
 
     <style name="button_background">
         <item name="android:layout_height">wrap_content</item>
