@@ -3,13 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/back"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@android:color/black"
+        android:padding="10dp">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Menu"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:id="@+id/username"
+            />
+    </LinearLayout>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -25,7 +35,8 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
 
         <LinearLayout style="@style/button_background">
 
