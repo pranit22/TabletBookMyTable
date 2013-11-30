@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
             final Activity thisActivity = this;
             new AlertDialog.Builder(this)
                     .setTitle("Booking not found!")
-                    .setIcon(R.drawable.icon_exit)
+                    .setIcon(R.drawable.denied_icon)
                     .setMessage(text)
                     .setNegativeButton("OK", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
