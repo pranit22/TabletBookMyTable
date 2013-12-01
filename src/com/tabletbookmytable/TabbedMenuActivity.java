@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.tabletbookmytable.extras.FoodItemDialog;
@@ -75,6 +77,13 @@ public class TabbedMenuActivity extends FragmentActivity implements
             tabIndex = extras.getInt("tabIndex");
         }
         viewPager.setCurrentItem(tabIndex, true);
+        
+        LayoutInflater inflater = getLayoutInflater();
+        View view = inflater.inflate(R.layout.swipe,(ViewGroup) findViewById(R.id.linearLayout1));
+        Toast toast = new Toast(this);
+        toast.setView(view);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.show();
     }
 
     public void onbreadsticks(View view) {
