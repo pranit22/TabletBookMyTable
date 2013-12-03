@@ -23,6 +23,10 @@
         <activity
             android:name="com.tabletbookmytable.MainActivity"
             android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.tabletbookmytable.TapYourDeviceActivity"
@@ -45,11 +49,6 @@
         <activity
             android:name="com.tabletbookmytable.TabbedMenuActivity"
             android:label="@string/title_activity_payment">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             </activity>
         <activity
             android:name="com.tabletbookmytable.PlaceOrderActivity"
